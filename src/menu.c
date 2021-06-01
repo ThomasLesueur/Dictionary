@@ -8,7 +8,7 @@ char get_user_input()
     printf("Please enter a Value : ");
     while(getline(&str, &size, stdin) > 0) {
         if (strlen(str) > 2 || isdigit(str[0]) == 0 ||
-        (isdigit(str[0]) != 0) && (str[0] < '1' || str[0] > '8')) {
+        ((isdigit(str[0]) != 0) && (str[0] < '1' || str[0] > '8'))) {
             printf("Error : Please enter a number between 1 and 8\n");
             printf("\nPlease enter a Value : ");
         }
@@ -30,7 +30,6 @@ void print_menu()
     printf("\t\t 7 : Output the total number of nodes\n");
     printf("\t\t 8 : Delete all nodes\n");
     printf("*----------------------------*\n");
-    fflush(0);
 }
 
 void call_function(char input, tree_node_t **tree)
